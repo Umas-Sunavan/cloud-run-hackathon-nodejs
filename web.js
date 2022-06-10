@@ -10,6 +10,8 @@ app.get('/', function (req, res) {
 
 app.post('/', function (req, res) {
   console.log(req.body);
+  const myState = req.body.Arena.State[input.Links.Self.Href]
+  console.log("myState", myState);
   const moves = ['F', 'T', 'L', 'R'];
   res.send(moves[Math.floor(Math.random() * moves.length)]);
 });
